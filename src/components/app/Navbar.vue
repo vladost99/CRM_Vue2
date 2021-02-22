@@ -16,7 +16,7 @@
                 ref="dropdown"
                 data-target="dropdown"
               >
-                  USER NAME
+                {{ name }}
               <i class="material-icons right">arrow_drop_down</i>
             </a>
 
@@ -53,9 +53,14 @@
     filters: {
       date: dateFilter
     },
+    computed: {
+      name() {
+        return this.$store.getters.info.name;
+      }
+    },
     mounted() {
-   this.dropdown =  M.Dropdown.init(this.$refs.dropdown, {
-      constrainWidth: false
+       this.dropdown =  M.Dropdown.init(this.$refs.dropdown, {
+            constrainWidth: false
     });
     
     this.intervalTimer =  setInterval(() => {
@@ -65,6 +70,7 @@
     beforeUnmount() {
       console.log('Before destory timer');
       clearInterval(this.intervalTimer);
+       
        if (this.dropdown && this.dropdown.destroyed)  {
           this.dropdown.destroy();
        }

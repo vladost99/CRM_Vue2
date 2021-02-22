@@ -3,7 +3,9 @@ import Vuelidate from 'vuelidate';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import currencyFilter from '@/filters/currencyFilter';
 import messagePlugin from '@/utils/messagePlugin';
+import Loader from '@/components/Loader';
 import './registerServiceWorker';
 import 'materialize-css/dist/js/materialize.min';
 
@@ -13,10 +15,10 @@ import 'firebase/database';
 
 
 Vue.config.productionTip = false
-
+Vue.filter('currency', currencyFilter);
 Vue.use(Vuelidate);
 Vue.use(messagePlugin);
-
+Vue.use('Loader',Loader);
 
 
 firebase.initializeApp({
