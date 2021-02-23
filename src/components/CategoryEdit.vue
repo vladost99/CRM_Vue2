@@ -104,8 +104,15 @@ export default {
        } catch(e) {throw e}
     }
   },
+  computed: {
+      categoryFromState() {
+        return this.$store.getters.getCategoryId;
+      }
+  },
   created() {
-   const {id, title, limit} = this.categories[0];
+   let index = this.categories.findIndex(category => category.id === this.categoryFromState)
+   index =  index >= 0 ? index : 0;
+   const {id, title, limit} = this.categories[index];
    this.current = id;
    this.title = title;
    this.limit = limit;

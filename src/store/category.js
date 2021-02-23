@@ -1,6 +1,9 @@
 import firebase from 'firebase/app';
 
 export default {
+    state: {
+        currentCategory:  ''
+    },
     actions: {
         async createCategory({commit, dispatch}, {title, limit}) {
             try {
@@ -33,11 +36,21 @@ export default {
             try {
                 const uid = await dispatch('getUid');
                 await firebase.database().ref(`/users/${uid}/categories`).child(id).update({title, limit});
-                
+                commit('SET_CURRENT_CATEGORY', id);
             } catch(e) {
                  commit('setError', e);
                  throw e;
             }
+        }
+    },
+    getters: {
+        getCategoryId(state) {
+            return state.currentCategory;
+        }
+    },
+    mutations: {
+        SET_CURRENT_CATEGORY(state, currentCategoryId) {
+            state.currentCategory =  currentCategoryId;
         }
     }
 }
