@@ -36,7 +36,7 @@
               <input
                   id="limit"
                   type="number"
-                  v-model="limit"
+                  v-model.number="limit"
                   :class="{invalid: $v.limit.$dirty && !$v.limit.minValue}"
               >
               <label for="limit">Лимит</label>
@@ -70,7 +70,7 @@ export default {
     return {
       select: null,
       title: '',
-      limit: 10,
+      limit: 100,
       current: null
     }
   },
