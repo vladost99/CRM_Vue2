@@ -5,7 +5,7 @@
           <a href="#" @click.prevent="$emit('click-sidebar')">
             <i class="material-icons black-text">dehaze</i>
           </a>
-          <span class="black-text">{{ date | date('HH:mm:ss')  }}</span>
+          <span class="black-text">{{ date | date('datetime')  }}</span>
         </div>
 
         <ul class="right hide-on-small-and-down">
@@ -41,7 +41,7 @@
 
 <script>
  import M from 'materialize-css/dist/js/materialize.min'; 
- import { dateFilter } from "vue-date-fns";
+ //import { dateFilter } from "vue-date-fns";
    export default {
     data() {
       return {
@@ -50,9 +50,7 @@
         dropdown: null,
       }
     },
-    filters: {
-      date: dateFilter
-    },
+   
     computed: {
       name() {
         return this.$store.getters.info.name;
