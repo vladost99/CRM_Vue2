@@ -8,7 +8,8 @@ export default {
             }
             catch(e) {
                 commit('setError', e);
-
+                //console.log(e);
+                throw e;
             }
         },
         async logout({commit}) {
@@ -26,6 +27,7 @@ export default {
                 }
                 catch(e) {
                     commit('setError', e);
+                    //console.log(e);
                     throw e;
                 }
            },

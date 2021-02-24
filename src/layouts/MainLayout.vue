@@ -25,6 +25,7 @@
 import Navbar from '@/components/app/Navbar';
 import Sidebar from '@/components/app/Sidebar';
 import Loader from '../components/Loader.vue';
+import messages from '../utils/messages';
 export default {
   name: 'main-layout',
   components: {
@@ -38,6 +39,17 @@ export default {
           loading: true
     }
   },
+    computed: {
+        error() {
+           return this.$store.getters.error;
+        }
+    },
+    watch: {
+        error(fbError) {
+           this.$error(messages[fbError.code] || 'Что-то пошло не так');
+           //console.log(fbError);
+        }
+    },
   async mounted() {
         if (!Object.keys(this.$store.getters.info).length) {
           await  this.$store.dispatch('fetchInfo');
