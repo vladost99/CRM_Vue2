@@ -9,6 +9,8 @@ import tooltipDirective from './directives/tooltipDirective';
 import messagePlugin from '@/utils/messagePlugin';
 import Loader from '@/components/Loader';
 import Paginate from 'vuejs-paginate';
+import localizeFilter from './filters/localizeFilter';
+
 import './registerServiceWorker';
 import 'materialize-css/dist/js/materialize.min';
 
@@ -20,6 +22,7 @@ import 'firebase/database';
 Vue.config.productionTip = false
 Vue.filter('currency', currencyFilter);
 Vue.filter('date',dateFilter);
+Vue.filter('localize', localizeFilter);
 Vue.directive('tooltip', tooltipDirective);
 Vue.use(Vuelidate);
 Vue.use(messagePlugin);
