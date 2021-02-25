@@ -8,6 +8,7 @@ import dateFilter from './filters/dateFilter';
 import tooltipDirective from './directives/tooltipDirective';
 import messagePlugin from '@/utils/messagePlugin';
 import Loader from '@/components/Loader';
+import Paginate from 'vuejs-paginate';
 import './registerServiceWorker';
 import 'materialize-css/dist/js/materialize.min';
 
@@ -23,6 +24,7 @@ Vue.directive('tooltip', tooltipDirective);
 Vue.use(Vuelidate);
 Vue.use(messagePlugin);
 Vue.use('Loader',Loader);
+Vue.component('paginate', Paginate);
 
 
 firebase.initializeApp({
