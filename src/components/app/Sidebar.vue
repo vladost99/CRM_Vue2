@@ -43,7 +43,7 @@ export default {
 
 <style>
     li.active.router-link-exact-active {
-        background: #f9b93e !important;
+        background: #bdb9b3 !important;
         color: #000000;
     } 
 </style>
