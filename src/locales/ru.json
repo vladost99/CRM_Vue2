@@ -2,5 +2,15 @@
     "ProfileTitle": "Профиль",
     "Name": "Имя",
     "Update": "Обновить",
-    "Message_EnterName": "Введите ваше имя"
+    "Message_EnterName": "Введите ваше имя",
+    "Sidebar_Score": "Счёт",
+    "Sidebar_History": "История",
+    "Sidebar_Planning": "Планирование",
+    "Sidebar_New_Record": "Новая запись",
+    "Sidebar_Category": "Категория",
+    "Currency_account": "Счёт валют",
+    "Exchange_rates": "Курс валют",
+    "Rate": "Валюта",
+    "Course": "Курс",
+    "Date": "Дата"
 }

@@ -2,5 +2,15 @@
     "ProfileTitle": "Profile",
     "Name": "Name",
     "Update": "Update",
-    "Message_EnterName": "Enter name"
+    "Message_EnterName": "Enter name",
+    "Sidebar_Score": "Bill",
+    "Sidebar_History": "History",
+    "Sidebar_Planning": "Planning",
+    "Sidebar_New_Record": "New Record",
+    "Sidebar_Category": "Category",
+    "Currency_account": "Currency account",
+    "Exchange_rates": "Exchange Rates",
+    "Rate": "Rate",
+    "Course": "Course",
+    "Date": "Date"
 }

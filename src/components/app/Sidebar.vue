@@ -11,7 +11,7 @@
             :to="link.url"
             :exact="link.exact"
             >
-        <a href="#"  class="waves-effect waves-orange pointer">  {{ link.title }} </a>
+        <a href="#"  class="waves-effect waves-orange pointer">  {{ link.title | localize }} </a>
       </router-link>
      
 
@@ -29,11 +29,11 @@ export default {
     data() {
         return {
             links: [
-            {title: 'Счет', url: '/', exact: true},
-            {title: 'История', url: '/history'},
-            {title: 'Планирование', url: '/planning'},
-            {title: 'Новая запись', url: '/record'},
-            {title: 'Категории', url: '/categories'},
+            {title: 'Sidebar_Score', url: '/', exact: true},
+            {title: 'Sidebar_History', url: '/history'},
+            {title: 'Sidebar_Planning', url: '/planning'},
+            {title: 'Sidebar_New_Record', url: '/record'},
+            {title: 'Sidebar_Category', url: '/categories'},
         ]
         }
     },
